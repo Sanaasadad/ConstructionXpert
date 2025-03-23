@@ -7,7 +7,7 @@ public class Projets {
     private int id;
     private String nom;
     private String description;
-    private static Date dateDebut;
+    private  Date dateDebut;
     private Date dateFin;
     private double budget;
 
@@ -35,7 +35,7 @@ public class Projets {
         this.description = description;
     }
 
-    public static Date getDateDebut() {
+    public Date getDateDebut() {
         return dateDebut;
     }
 

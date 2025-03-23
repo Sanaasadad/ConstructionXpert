@@ -74,10 +74,27 @@ public class projetDao {
     }
 
     public static void suprimerProjet(int id) throws SQLException, ClassNotFoundException {
-        String sql = "DELETE FROM Projets WHERE id = ?";
+        String sql = "DELETE FROM projets WHERE id = ?";
         Connection con = DBConnection.getConnection();
         PreparedStatement ps = con.prepareStatement(sql);
         ps.setInt(1, id);
         ps.executeUpdate();
+    }
+    public static List<Projets> ListerProjets() throws SQLException, ClassNotFoundException {
+        List<Projets> projets = new ArrayList<>();
+        String sql = "SELECT id, nom FROM projets"; // Assurez-vous que la table s'appelle "projets"
+
+        try (Connection con = DBConnection.getConnection();
+             PreparedStatement ps = con.prepareStatement(sql);
+             ResultSet rs = ps.executeQuery()) {
+
+            while (rs.next()) {
+                Projets projet = new Projets();
+                projet.setId(rs.getInt("id"));
+                projet.setNom(rs.getString("nom"));
+                projets.add(projet);
+            }
+        }
+        return projets;
     }
 }

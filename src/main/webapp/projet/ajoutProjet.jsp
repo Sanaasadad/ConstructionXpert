@@ -116,7 +116,7 @@
             <input type="number" name="budget" class="form-control" required>
         </div>
         <button type="submit" class="btn btn-success">Ajouter</button>
-        <a href="?action=list" class="btn btn-secondary">Annuler</a>
+        <a href="Taches?action=list" class="btn btn-secondary">Annuler</a>
     </form>
 </div>
 </body>
