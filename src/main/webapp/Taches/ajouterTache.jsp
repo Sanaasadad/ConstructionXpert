@@ -7,110 +7,188 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
-        :root {
-            --primary-color: #3498db;
-            --primary-hover: #2980b9;
-            --secondary-color: #2c3e50;
-            --light-gray: #f8f9fa;
-            --white: #ffffff;
-            --border-color: #e0e0e0;
-        }
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap');
 
         body {
             font-family: 'Roboto', sans-serif;
-            background-color: var(--light-gray);
+            background: linear-gradient(rgba(245, 247, 250, 0.9), rgba(195, 207, 226, 0.9)),
+            url('crop-architect-opening-blueprint.jpg') no-repeat center center fixed;
+            background-size: cover;
             color: #333;
             margin: 0;
             padding: 0;
         }
 
         .navbar {
-            background-color: var(--white);
-            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-            padding: 0.5rem 1rem;
+            background: rgba(255, 255, 255, 0.98);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0.75rem 2rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(5px);
         }
 
         .navbar-brand {
             font-weight: 700;
-            font-size: 1.25rem;
-            color: var(--secondary-color);
+            font-size: 1.5rem;
+            color: #1a3c6e;
             display: flex;
             align-items: center;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover {
+            transform: scale(1.05);
         }
 
         .navbar-brand img {
-            height: 40px;
-            margin-right: 10px;
+            height: 45px;
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .navbar-brand:hover img {
+            transform: rotate(15deg);
         }
 
         .btn-custom {
-            background-color: var(--primary-color);
-            color: var(--white);
+            background: #1e90ff;
+            color: white;
             border: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            font-size: 0.9rem;
-            transition: background-color 0.3s ease;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-size: 1rem;
+            font-weight: 500;
+            transition: all 0.3s ease;
         }
 
         .btn-custom:hover {
-            background-color: var(--primary-hover);
-            color: var(--white);
+            background: #00b4d8;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 12px rgba(30, 144, 255, 0.3);
         }
 
         .dropdown-menu {
-            font-size: 0.9rem;
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
             border: none;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            padding: 8px 0;
+        }
+
+        .dropdown-item {
+            padding: 8px 16px;
+            transition: background 0.2s ease;
         }
 
         .dropdown-item:hover {
-            background-color: var(--light-gray);
+            background: #e8f1ff;
+            color: #1e90ff;
         }
 
-        .form-container {
-            max-width: 800px;
-            margin: 30px auto;
-            background-color: var(--white);
+        .form-container, .container {
+            max-width: 900px;
+            margin: 40px auto;
+            background: rgba(255, 255, 255, 0.98);
             padding: 30px;
-            border-radius: 10px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(5px);
         }
 
-        .form-container h2 {
-            color: var(--secondary-color);
-            margin-bottom: 1.5rem;
+        h2 {
+            color: #1a3c6e;
             font-weight: 700;
+            font-size: 1.75rem;
+            margin-bottom: 30px;
+            text-align: center;
+            position: relative;
+        }
+
+        h2::after {
+            content: '';
+            width: 50px;
+            height: 3px;
+            background: #1e90ff;
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
         }
 
         .form-label {
             font-weight: 500;
-            color: var(--secondary-color);
-            margin-bottom: 0.5rem;
+            color: #2c3e50;
+            margin-bottom: 8px;
         }
 
-        .form-control {
-            border-radius: 5px;
-            border: 1px solid var(--border-color);
-            padding: 10px;
+        .form-control, .form-select {
+            border: 1px solid #e0e0e0;
+            border-radius: 8px;
+            padding: 12px;
             transition: border-color 0.3s ease, box-shadow 0.3s ease;
         }
 
-        .form-control:focus {
-            border-color: var(--primary-color);
-            box-shadow: 0 0 0 0.25rem rgba(52, 152, 219, 0.25);
+        .form-control:focus, .form-select:focus {
+            border-color: #1e90ff;
+            box-shadow: 0 0 8px rgba(30, 144, 255, 0.2);
         }
 
         .required-field::after {
             content: " *";
-            color: #dc3545;
+            color: #e74c3c;
         }
 
+        .table {
+            background: rgba(255, 255, 255, 0.98);
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+        }
+
+        .table th {
+            background: #1e90ff;
+            color: white;
+            padding: 14px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .table td {
+            padding: 14px;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+            transition: background 0.2s ease;
+        }
+
+        .table-hover tbody tr:hover {
+            background: rgba(30, 144, 255, 0.1);
+        }
+
+        .btn-primary, .btn-secondary, .btn-warning, .btn-danger {
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary { background: #1e90ff; border: none; }
+        .btn-primary:hover { background: #00b4d8; transform: translateY(-2px); }
+        .btn-secondary { background: #95a5a6; border: none; }
+        .btn-secondary:hover { background: #7f8c8d; }
+        .btn-warning { background: #f1c40f; border: none; }
+        .btn-warning:hover { background: #e67e22; }
+        .btn-danger { background: #e74c3c; border: none; }
+        .btn-danger:hover { background: #c0392b; }
+
         @media (max-width: 768px) {
-            .form-container {
+            .form-container, .container {
                 margin: 20px 15px;
                 padding: 20px;
             }
+            .navbar { padding: 0.5rem 1rem; }
+            .btn-custom { padding: 8px 16px; font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -135,6 +213,8 @@
                     <li><a class="dropdown-item" href="projet?action=list"><i class="fas fa-list me-2"></i>Afficher les Projets</a></li>
                     <li><a class="dropdown-item" href="Taches?action=add"><i class="fas fa-plus-circle me-2"></i>Ajouter une Tâche</a></li>
                     <li><a class="dropdown-item" href="Taches?action=list"><i class="fas fa-tasks me-2"></i>Afficher les Tâches</a></li>
+                    <li><a class="dropdown-item" href="Ressource?action=ajouterRessource">Ajouter une Ressource</a></li>
+                    <li><a class="dropdown-item" href="Ressource?action=ListRessource">Afficher les Ressources</a></li>
                 </ul>
             </div>
         </div>
