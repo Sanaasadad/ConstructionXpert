@@ -14,7 +14,7 @@
 
         <div class="mb-3">
             <label class="form-label">Description</label>
-            <textarea name="description" class="form-control" required>${tache.description}</textarea>
+            <textarea name="type" class="form-control" required>${tache.type}</textarea>
         </div>
 
         <div class="mb-3">

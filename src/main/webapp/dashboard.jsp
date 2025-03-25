@@ -7,96 +7,84 @@
 <head>
     <title>Tableau de Bord</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
     <style>
-        /* Style pour le fond d'écran blanc */
         body {
-            background-color: white; /* Fond blanc */
-            margin: 0;
-            font-family: Arial, sans-serif;
-            display: flex;
-            flex-direction: column; /* La navbar et le contenu sont empilés verticalement */
-            min-height: 100vh;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
         }
 
-        /* Style pour la navbar */
         .navbar {
-            background-color: #2c3e50; /* Gris foncé */
-            padding: 10px 20px;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            width: 100%; /* La navbar prend toute la largeur */
-            z-index: 1000; /* Pour s'assurer qu'elle reste au-dessus */
+            background-color: #ffffff;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 0.5rem 1rem;
         }
 
         .navbar-brand {
-            color: #ecf0f1 !important; /* Texte clair */
-            font-size: 24px;
-            font-weight: bold;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: #2c3e50;
             display: flex;
             align-items: center;
         }
 
         .navbar-brand img {
-            height: 60px;
-            margin-right: 20px;
+            height: 40px;
+            margin-right: 10px;
         }
 
-        /* Boutons jaunes */
         .btn-custom {
-            background-color: #FFD700; /* Jaune vif */
-            color: #2c3e50; /* Texte gris foncé */
+            background-color: #3498db;
+            color: white;
             border: none;
-            padding: 10px 20px;
+            padding: 8px 16px;
             border-radius: 5px;
-            font-size: 16px;
+            font-size: 0.9rem;
             transition: background-color 0.3s ease;
         }
 
         .btn-custom:hover {
-            background-color: #FFC107; /* Jaune plus foncé au survol */
+            background-color: #2980b9;
         }
 
-        /* Conteneur pour la photo et le contenu */
+        .dropdown-menu {
+            font-size: 0.9rem;
+        }
+
         .main-content {
-            display: flex; /* Flexbox pour diviser en deux colonnes */
-            flex: 1; /* Prend tout l'espace disponible sous la navbar */
+            display: flex;
+            padding: 20px;
         }
 
-        /* Colonne de l'image */
         .image-column {
-            flex: 1; /* Prend 50% de l'espace */
-            background-image: url('architectural-plans-project-drawing-pen.jpg'); /* Remplacez par le chemin de votre image */
+            flex: 1;
+            background-image: url('architectural-plans-project-drawing-pen.jpg');
             background-size: cover;
             background-position: center;
-            background-repeat: no-repeat;
-            height: 100vh; /* Prend toute la hauteur de la page */
-            margin-right: 20px; /* Espacement à droite */
-            border-radius: 10px; /* Bordures arrondies */
+            border-radius: 10px;
+            margin-right: 20px;
         }
 
-        /* Colonne du contenu */
         .content-column {
-            flex: 2; /* Prend plus d'espace que l'image (2/3 de l'espace) */
-            padding: 20px; /* Espacement intérieur */
-            overflow-y: auto; /* Ajouter un défilement si le contenu est trop long */
-            background-color: #f8f9fa; /* Gris clair pour le fond du contenu */
-            border-radius: 10px; /* Bordures arrondies */
-            margin: 20px; /* Espacement */
-            height: 100vh; /* Prend toute la hauteur de la page */
+            flex: 2;
+            background-color: white;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        /* Style pour les cartes de projet */
         .card {
-            background-color: white; /* Fond blanc */
+            background-color: white;
             border: none;
             border-radius: 10px;
             margin-bottom: 20px;
-            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Ombre légère */
-            color: #2c3e50; /* Texte gris foncé */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
         .card-header {
-            background-color: #34495e; /* Gris foncé pour l'en-tête */
-            color: white;
+            background-color: #ecf0f1;
+            color: #2c3e50;
             border-radius: 10px 10px 0 0;
             padding: 15px;
         }
@@ -106,35 +94,39 @@
         }
 
         .table {
-            background-color: white; /* Fond blanc pour le tableau */
-            color: #2c3e50; /* Texte gris foncé */
+            background-color: white;
+            color: #333;
             border-radius: 5px;
+            border: 1px solid #e0e0e0;
         }
 
         .table th {
-            background-color: #34495e; /* Gris foncé pour les en-têtes */
+            background-color: #3498db;
             color: white;
+            border-bottom: 2px solid #2980b9;
+        }
+
+        .table td {
+            border-bottom: 1px solid #e0e0e0;
         }
 
         .table-hover tbody tr:hover {
-            background-color: rgba(52, 73, 94, 0.1); /* Effet de survol gris léger */
+            background-color: rgba(52, 152, 219, 0.1);
         }
     </style>
 </head>
 <body>
-<!-- Barre de navigation -->
-<nav class="navbar navbar-expand-lg navbar-dark">
+<!-- Barre de navigation compacte -->
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
-            <img src="ConstructionXpert-removebg-preview.png" alt="Logo"> <!-- Remplacez par le chemin de votre logo -->
+            <img src="ConstructionXpert-removebg-preview.png" alt="Logo">
             ConstructionXpert
         </a>
         <div class="d-flex">
-            <!-- Bouton Informations sur l'entreprise -->
             <button class="btn btn-custom me-2" onclick="window.location.href='informations'">
                 Informations sur l'entreprise
             </button>
-            <!-- Menu déroulant pour Ajouter/Afficher -->
             <div class="dropdown">
                 <button class="btn btn-custom dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
                     Actions
@@ -144,6 +136,9 @@
                     <li><a class="dropdown-item" href="projet?action=list">Afficher les Projets</a></li>
                     <li><a class="dropdown-item" href="Taches?action=add">Ajouter une Tâche</a></li>
                     <li><a class="dropdown-item" href="Taches?action=list">Afficher les Tâches</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                    <li><a class="dropdown-item" href="Ressource?action=ajouterRessource">Ajouter une Ressource</a></li>
+                    <li><a class="dropdown-item" href="Ressource?action=ListRessource">Afficher les Ressources</a></li>
                 </ul>
             </div>
         </div>
@@ -159,10 +154,7 @@
     <div class="content-column">
         <div class="container mt-5">
             <%
-                // Récupérer la map des tâches par projet
                 Map<Projets, List<Taches>> tachesParProjet = (Map<Projets, List<Taches>>) request.getAttribute("tachesParProjet");
-
-                // Parcourir chaque projet
                 for (Map.Entry<Projets, List<Taches>> entry : tachesParProjet.entrySet()) {
                     Projets projet = entry.getKey();
                     List<Taches> taches = entry.getValue();

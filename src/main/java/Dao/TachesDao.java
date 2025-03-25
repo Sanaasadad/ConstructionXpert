@@ -71,7 +71,7 @@ public class TachesDao {
             ps.setDate(2, tache.getDateDebut());
             ps.setDate(3, tache.getDateFin());
             ps.setInt(4, tache.getProjet_id());
-            ps.setInt(5, tache.getId());
+            ps.setInt(5, tache.getId()); // Assurez-vous que l'ID est bien défini
             ps.executeUpdate();
         }
     }

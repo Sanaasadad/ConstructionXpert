@@ -11,6 +11,7 @@ public class Projets {
     private Date dateFin;
     private double budget;
 
+
     public int getId() {
         return id;
     }

@@ -3,10 +3,10 @@ package Model;
 public class Ressource {
     int id;
     String nom;
-    String description;
+    String type;
+    String nom_fournisseur ;
     int quantite;
-    Double cout;
-    int Taches_id;
+    int taches_id;
 
     public int getId() {
         return id;
@@ -24,12 +24,12 @@ public class Ressource {
         this.nom = nom;
     }
 
-    public String getDescription() {
-        return description;
+    public String getType() {
+        return type;
     }
 
-    public void setDescription(String description) {
-        this.description = description;
+    public void setType(String type) {
+        this.type = type;
     }
 
     public int getQuantite() {
@@ -40,19 +40,19 @@ public class Ressource {
         this.quantite = quantite;
     }
 
-    public Double getCout() {
-        return cout;
+    public String getNom_fournisseur() {
+        return nom_fournisseur;
     }
 
-    public void setCout(Double cout) {
-        this.cout = cout;
+    public void setNom_fournisseur(String nom_fournisseur) {
+        this.nom_fournisseur = nom_fournisseur;
     }
 
     public int getTaches_id() {
-        return Taches_id;
+        return taches_id;
     }
 
     public void setTaches_id(int taches_id) {
-        Taches_id = taches_id;
+        this.taches_id = taches_id;
     }
 }
