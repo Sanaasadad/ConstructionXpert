@@ -26,7 +26,7 @@ ConstructionXpert Services Solution est une application de gestion de projets ba
 ### UML Diagrams
 
 **1-Diagramme de classe :**
-![img](Diagramme/use_case.png)![img](diagrammeUML/dia1.png)
+![img](diagrammeUML/DIA11.png)
 **2-Diagramme de cas d'utilisation :**
 ![img](diagrammeUML/dia2.png)
 **3-Diagramme de séquence :**
