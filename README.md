@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 # ConstructionXpert Services - Application de Gestion de Projets de Construction
 
 ### Description
@@ -31,15 +31,6 @@ ConstructionXpert Services Solution est une application de gestion de projets ba
 ![img](diagrammeUML/dia2.png)
 **3-Diagramme de séquence :**
 ![img](diagrammeUML/dia3.png)
-=======
 
-Cette application web permet aux équipes de construction de créer, gérer et suivre leurs projets de manière efficace. Elle offre les fonctionnalités suivantes :
-✔ Création et gestion des projets de construction
-✔ Assignation des tâches aux membres de l’équipe
-✔ Gestion des ressources nécessaires pour chaque projet
-✔ Suivi des détails des projets et des tâches
-✔ Interface conviviale pour visualiser, mettre à jour et supprimer des projets
 
-Chaque projet peut contenir plusieurs tâches, et chaque tâche peut nécessiter différentes ressources.
 
->>>>>>> 3c38c0f4b3ef9b673a250df0816fd3c0ec9b42c0
