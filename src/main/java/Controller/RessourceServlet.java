@@ -39,8 +39,7 @@ public class RessourceServlet extends HttpServlet {
                     break;
                 case "modifierRessource":
                     int id = Integer.parseInt(req.getParameter("id"));
-                    // Remplacer par :
-                    Ressource ressource = RessourceDao.getRessourceById(id); // Vous devez implémenter cette méthode
+                    Ressource ressource = RessourceDao.getRessourceById(id);
 
                     req.setAttribute("ressource", ressource);
                     req.getRequestDispatcher("/Ressource/modifierRessource.jsp").forward(req, resp);

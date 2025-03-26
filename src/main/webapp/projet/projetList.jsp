@@ -119,37 +119,37 @@
       border-radius: 2px;
     }
 
-    /* Tableau modernisé et agrandi */
+
     .table {
-      background: #ffffff; /* Fond blanc pour le tableau */
+      background: #ffffff;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
-      width: 100%; /* Tableau plus large */
-      font-size: 1.1rem; /* Texte plus grand */
+      width: 100%;
+      font-size: 1.1rem;
     }
 
     .table th {
-      background: #1e90ff; /* Bleu pour les en-têtes */
-      color: #000000; /* Texte noir */
-      padding: 20px; /* Padding plus grand pour agrandir */
+      background: #1e90ff;
+      color: #000000;
+      padding: 20px;
       font-weight: 600;
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
 
     .table td {
-      padding: 20px; /* Padding plus grand pour agrandir */
-      border-bottom: 1px solid #6c757d; /* Gris foncé moyen pour les bordures */
-      color: #000000; /* Texte noir */
+      padding: 20px;
+      border-bottom: 1px solid #6c757d;
+      color: #000000;
       transition: background 0.2s ease;
     }
 
     .table-hover tbody tr:hover {
-      background: rgba(108, 117, 125, 0.2); /* Gris foncé moyen en survol */
+      background: rgba(108, 117, 125, 0.2);
     }
 
-    /* Boutons modernes */
+
     .btn-primary, .btn-warning, .btn-danger {
       padding: 12px 24px;
       border-radius: 50px;
@@ -158,9 +158,9 @@
     }
 
     .btn-primary {
-      background: #1e90ff; /* Bleu */
+      background: #1e90ff;
       border: none;
-      color: #000000; /* Texte noir */
+      color: #000000;
     }
 
     .btn-primary:hover {
@@ -170,9 +170,9 @@
     }
 
     .btn-warning {
-      background: #1e90ff; /* Bleu (remplacement de jaune pour respecter le thème) */
+      background: #1e90ff;
       border: none;
-      color: #000000; /* Texte noir */
+      color: #000000;
     }
 
     .btn-warning:hover {
@@ -181,9 +181,9 @@
     }
 
     .btn-danger {
-      background: #1e90ff; /* Bleu (remplacement de rouge pour respecter le thème) */
+      background: #1e90ff;
       border: none;
-      color: #000000; /* Texte noir */
+      color: #000000;
     }
 
     .btn-danger:hover {
@@ -191,7 +191,7 @@
       transform: translateY(-2px);
     }
 
-    /* Responsive */
+
     @media (max-width: 768px) {
       .container {
         margin: 40px 20px;
@@ -215,7 +215,7 @@
   </style>
 </head>
 <body>
-<!-- Barre de navigation (inchangée) -->
+
 <nav class="navbar navbar-expand-lg navbar-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
@@ -243,7 +243,7 @@
   </div>
 </nav>
 
-<!-- Contenu principal -->
+
 <div class="container mt-5">
   <h2 class="text-center">Liste des Projets</h2>
   <a href="projet?action=add" class="btn btn-primary mb-3">Ajouter un projet</a>

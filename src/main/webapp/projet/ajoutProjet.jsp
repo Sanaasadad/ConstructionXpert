@@ -160,7 +160,7 @@
     </style>
 </head>
 <body>
-<!-- Barre de navigation -->
+
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -188,7 +188,7 @@
     </div>
 </nav>
 
-<!-- Contenu principal -->
+
 <div class="container mt-5">
     <h2 class="text-center">Ajouter un Projet</h2>
     <form action="?action=add" method="post" class="border p-4 rounded shadow">

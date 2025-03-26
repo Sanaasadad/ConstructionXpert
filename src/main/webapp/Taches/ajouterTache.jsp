@@ -87,7 +87,7 @@
             color: #1e90ff;
         }
 
-        .form-container, .container {
+        .form-container{
             max-width: 900px;
             margin: 40px auto;
             background: rgba(255, 255, 255, 0.98);
@@ -140,12 +140,7 @@
             color: #e74c3c;
         }
 
-        .table {
-            background: rgba(255, 255, 255, 0.98);
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
-        }
+
 
         .table th {
             background: #1e90ff;
@@ -166,21 +161,17 @@
             background: rgba(30, 144, 255, 0.1);
         }
 
-        .btn-primary, .btn-secondary, .btn-warning, .btn-danger {
+        .btn-secondary{
             padding: 10px 20px;
             border-radius: 25px;
             font-weight: 500;
             transition: all 0.3s ease;
         }
 
-        .btn-primary { background: #1e90ff; border: none; }
-        .btn-primary:hover { background: #00b4d8; transform: translateY(-2px); }
+
         .btn-secondary { background: #95a5a6; border: none; }
         .btn-secondary:hover { background: #7f8c8d; }
-        .btn-warning { background: #f1c40f; border: none; }
-        .btn-warning:hover { background: #e67e22; }
-        .btn-danger { background: #e74c3c; border: none; }
-        .btn-danger:hover { background: #c0392b; }
+
 
         @media (max-width: 768px) {
             .form-container, .container {
@@ -193,7 +184,7 @@
     </style>
 </head>
 <body>
-<!-- Barre de navigation -->
+
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container-fluid">
         <a class="navbar-brand" href="#">
@@ -221,7 +212,6 @@
     </div>
 </nav>
 
-<!-- Contenu principal - Formulaire d'ajout de tâche -->
 <div class="form-container">
     <h2><i class="fas fa-plus-circle me-2"></i>Ajouter une nouvelle tâche</h2>
 
@@ -265,7 +255,7 @@
     </form>
 </div>
 
-<!-- Bootstrap JS et dépendances -->
+
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
 </body>
